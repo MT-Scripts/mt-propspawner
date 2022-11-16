@@ -19,7 +19,7 @@ function makeProp(data, freeze, synced)
 end
 
 CreateThread(function()
-    for k, v in pairs(Config.RepairStations) do
+    for k, v in pairs(Config.Props) do
         makeProp({coords = vector4(v.x, v.y, v.z, v.h), prop = v.name}, 1, 0)
     end
 end)
